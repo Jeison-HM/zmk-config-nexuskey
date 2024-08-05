@@ -44,7 +44,7 @@
     {
         compatible = "zmk,kscan-sideband-behaviors";
         wakeup-source;
-        kscan = <&kscan>;
+        kscan = <&default_kscan>;
         soft_off {
             column = <0>;
             row = <3>;
