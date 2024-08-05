@@ -3,4 +3,7 @@ if SHIELD_NEXUSKEY
 config ZMK_KEYBOARD_NAME
     default "NexusKey"
 
+config ZMK_PM_SOFT_OFF
+    bool "Soft-off support"
+
 endif
