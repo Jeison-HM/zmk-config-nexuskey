@@ -10,8 +10,8 @@
         default_layer {
             bindings = 
             <
-                &kp KP_A    &mo 1
-                &kp KP_C    &kp KP_N3
+                &kp A    &mo 1
+                &kp C    &kp SPACE
             >;
         };
 
