@@ -3,18 +3,21 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    keymap {
-        compatible = "zmk, keymap";
+    keymap
+    {
+        compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
+            bindings = 
+            <
                 &kp KP_A    &mo 1
                 &kp KP_C    &kp KP_N3
             >;
         };
 
         bt_layer {
-            bindings = <
+            bindings = 
+            <
                 &bt BT_SEL 0    &bootloader
                 &bt BT_CLR    &bt BT_SEL 1
             >;
