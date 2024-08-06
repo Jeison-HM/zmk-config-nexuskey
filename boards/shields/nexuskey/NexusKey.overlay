@@ -58,7 +58,7 @@
         hw_soft_off: hw_soft_off {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
-            hold-time-ms = <5000>;
+            // hold-time-ms = <5000>;
         };
     };
 };
@@ -67,7 +67,7 @@
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
 
-        trigger = <&on_off_key>;
+        trigger = <&hw_soft_off>;
         wakeup-source;
     };
 };
