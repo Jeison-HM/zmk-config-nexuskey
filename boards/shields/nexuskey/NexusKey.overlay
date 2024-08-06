@@ -18,13 +18,12 @@
         row-gpios 
             = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //P0.24
             , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P1.06
-            // , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P0.02 Soft Off
+            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P0.02 Soft Off
             ;
 
         col-gpios
             = <&gpio1 15 GPIO_ACTIVE_HIGH>  //P1.15
             , <&gpio1 0 GPIO_ACTIVE_HIGH>   //P1.00
-            , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_HIGH)>   //P0.02 Soft Off
             ;
     };
 
@@ -47,35 +46,9 @@
         wakeup-source;
         kscan = <&default_kscan>;
         soft_off {
-            column = <3>;
-            row = <0>;
+            column = <0>;
+            row = <3>;
             bindings = <&hw_soft_off>;
         };
-    };
-};
-
-/ {
-    behaviors {
-        hw_soft_off: hw_soft_off {
-            compatible = "zmk,behavior-soft-off";
-            #binding-cells = <0>;
-            // hold-time-ms = <5000>;
-        };
-    };
-};
-
-/ {
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-
-        trigger = <&hw_soft_off>;
-        wakeup-source;
-    };
-};
-
-/ {
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
     };
 };

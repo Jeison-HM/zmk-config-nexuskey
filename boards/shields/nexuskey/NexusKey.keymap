@@ -10,7 +10,7 @@
         default_layer {
             bindings = 
             <
-                &kp A    &mo 1
+                &kp A    &kp BACKSPACE
                 &kp C    &kp SPACE
             >;
         };
@@ -22,5 +22,31 @@
                 &bt BT_CLR    &bt BT_SEL 1
             >;
         };
+    };
+};
+
+/ {
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            // hold-time-ms = <5000>;
+        };
+    };
+};
+
+/ {
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+
+        trigger = <&on_off_key>;
+        wakeup-source;
+    };
+};
+
+/ {
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&wakeup_source>;
     };
 };
