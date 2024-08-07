@@ -37,13 +37,30 @@
             RC(1,0) RC(1,1)
         >;
     };
-};
 
-/ {
     keys {
-        compatible = "gpio-keys";
-        soft_off_key: soft_off_key {
-            gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02 Soft Off
+            compatible = "gpio-keys";
+            soft_off_key: soft_off_key {
+                gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02 Soft Off
+            };
         };
+
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_key>;
+        wakeup-source;
+    };
+
+    soft_off_wakers {
+            compatible = "zmk,soft-off-wakeup-sources";
+            wakeup-sources = <&wakeup_source>;
+    };
+
+    behaviors {
+            hw_soft_off: hw_soft_off {
+                    compatible = "zmk,behavior-soft-off";
+                    #binding-cells = <0>;
+                    hold-time-ms = <0>;
+            };
     };
 };

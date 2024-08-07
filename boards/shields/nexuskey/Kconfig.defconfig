@@ -4,6 +4,6 @@ config ZMK_KEYBOARD_NAME
     default "NexusKey"
 
 config ZMK_PM_SOFT_OFF
-    bool y
+    default y
 
 endif
