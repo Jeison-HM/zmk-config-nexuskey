@@ -10,18 +10,17 @@
     default_kscan: kscan
     {
         compatible = "zmk,kscan-gpio-matrix";
-        wakeup-source;
         label = "default_kscan";
         diode-direction = "col2row";
 
         row-gpios 
-            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //P0.24
-            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P1.06
+            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // P0.24
+            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    // P1.06
             ;
 
         col-gpios
-            = <&gpio1 15 GPIO_ACTIVE_HIGH>  //P1.15
-            , <&gpio1 0 GPIO_ACTIVE_HIGH>   //P1.00
+            = <&gpio1 15 GPIO_ACTIVE_HIGH>  // P1.15
+            , <&gpio1 0 GPIO_ACTIVE_HIGH>   // P1.00
             ;
     };
 
@@ -38,30 +37,38 @@
         >;
     };
 
+// Device that activates after turning off keyboard.
+
     keys {
             compatible = "gpio-keys";
             soft_off_key: soft_off_key {
-                gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02 Soft Off
+                gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.02 Soft Off
             };
         };
 
+// Attach the keys device to wake up sources so it can turn on the keyboard.
+
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
-        extra-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH)>, <&gpio1 0 GPIO_ACTIVE_HIGH>;
-        trigger = <&soft_off_key>;
+        extra-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH)>, <&gpio1 0 GPIO_ACTIVE_HIGH>; // Enable columns pins for AND gate.
+        trigger = <&soft_ off_key>;
         wakeup-source;
     };
+
+// Attach the wake up sources to the Soft Off.
 
     soft_off_wakers {
             compatible = "zmk,soft-off-wakeup-sources";
             wakeup-sources = <&wakeup_source>;
     };
 
+// Init Soft Off behavior when keyboard's off.
+
     behaviors {
             hw_soft_off: hw_soft_off {
                     compatible = "zmk,behavior-soft-off";
                     #binding-cells = <0>;
-                    hold-time-ms = <0>;
+                    hold-time-ms = <2000>; // Only turn on if the key is held for 2 seconds or longer.
             };
     };
 };
