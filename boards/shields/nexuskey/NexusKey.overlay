@@ -18,7 +18,7 @@
         row-gpios 
             = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //P0.24
             , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P1.06
-            , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>    //P0.02 Soft Off
+            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P0.02 Soft Off
             ;
 
         col-gpios
@@ -61,7 +61,7 @@
 
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
-        extra-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH)>;
+        extra-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH)>, <&gpio1 0 GPIO_ACTIVE_HIGH>;
         trigger = <&soft_off_key>;
         wakeup-source;
     };
