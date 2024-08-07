@@ -1,5 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+// Matrix Scan
+
 / {
     chosen
     {
@@ -36,8 +38,12 @@
             RC(1,0) RC(1,1)
         >;
     };
+};
 
-// Device that activates after turning off keyboard.
+// Soff Off Behavior
+
+/ {
+    // Device that activates after turning off keyboard.
 
     keys {
             compatible = "gpio-keys";
