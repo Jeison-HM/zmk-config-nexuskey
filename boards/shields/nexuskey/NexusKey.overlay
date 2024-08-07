@@ -51,7 +51,7 @@
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
         extra-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH)>, <&gpio1 0 GPIO_ACTIVE_HIGH>; // Enable columns pins for AND gate.
-        trigger = <&soft_ off_key>;
+        trigger = <&soft_off_key>;
         wakeup-source;
     };
 
