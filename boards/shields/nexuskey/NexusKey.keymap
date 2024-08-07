@@ -15,7 +15,7 @@
             bindings = 
             <
                 &kp A    &soft_off
-                &kp C    &kp SPACE
+                &kp C    &bootloader
             >;
         };
 

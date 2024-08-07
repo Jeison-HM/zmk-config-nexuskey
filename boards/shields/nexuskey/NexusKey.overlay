@@ -4,7 +4,6 @@
     chosen
     {
         zmk,kscan = &default_kscan;
-        zmk,kscan = &side_band_behavior_triggers;
         zmk,matrix-transform = &default_transform;
     };
 
@@ -18,7 +17,6 @@
         row-gpios 
             = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //P0.24
             , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P1.06
-            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    //P0.02 Soft Off
             ;
 
         col-gpios
@@ -40,18 +38,6 @@
         >;
     };
 
-    side_band_behavior_triggers: side_band_behavior_triggers
-    {
-        compatible = "zmk,kscan-sideband-behaviors";
-        wakeup-source;
-        kscan = <&default_kscan>;
-        soft_off {
-            row = <3>;
-            column = <0>;
-            bindings = <&hw_soft_off>;
-        };
-    };
-
     keys {
             compatible = "gpio-keys";
             soft_off_key: soft_off_key {
@@ -67,15 +53,15 @@
     };
 
     soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
+            compatible = "zmk,soft-off-wakeup-sources";
+            wakeup-sources = <&wakeup_source>;
     };
 
     behaviors {
-        hw_soft_off: hw_soft_off {
-            compatible = "zmk,behavior-soft-off";
-            #binding-cells = <0>;
-            hold-time-ms = <0>;
-        };
+            hw_soft_off: hw_soft_off {
+                    compatible = "zmk,behavior-soft-off";
+                    #binding-cells = <0>;
+                    hold-time-ms = <0>;
+            };
     };
 };
