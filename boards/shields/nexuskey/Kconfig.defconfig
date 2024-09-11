@@ -6,6 +6,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_PM_SOFT_OFF
+    default y
+
 endif
 
 if SHIELD_NEXUSKEY_LEFT || SHIELD_NEXUSKEY_RIGHT
