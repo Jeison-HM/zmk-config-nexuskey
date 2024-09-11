@@ -70,7 +70,7 @@
             hw_soft_off: hw_soft_off {
                     compatible = "zmk,behavior-soft-off";
                     #binding-cells = <0>;
-                    hold-time-ms = <HOLD_TIME>; // Only turn on if the key is held for 3 seconds or longer.
+                    hold-time-ms = <HOLD_TIME>;
             };
     };
 };

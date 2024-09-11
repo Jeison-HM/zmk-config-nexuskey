@@ -4,7 +4,7 @@
 #include "mymacros.h"
 
 &soft_off {
-    hold-time-ms = <HOLD_TIME>; // Only turn off if the key is held for 2 seconds or longer.
+    hold-time-ms = <HOLD_TIME>;
 };
 
 / {
@@ -28,7 +28,7 @@
         system_layer {
             bindings = 
             <
-                &soft_off   &trans  &trans  &trans  &sys_reset                          &sys_reset  &trans  &trans  &trans  &soft_off
+                &trans   &trans  &soft_off  &trans  &sys_reset                          &sys_reset  &trans  &trans  &trans  &soft_off
                 &trans      &trans  &trans  &trans  &trans       &trans     &trans      &trans      &trans  &trans  &trans  &trans
                 &bootloader &trans  &trans  &trans  &trans       &trans     &trans      &trans      &trans  &trans  &trans  &bootloader
             >;
