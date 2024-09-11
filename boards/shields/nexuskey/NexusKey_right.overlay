@@ -27,5 +27,5 @@
 // Enable columns pins for AND gate.
 &wakeup_source
 {
-    extra-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH)>, <&gpio1 6 (GPIO_ACTIVE_HIGH)>;
+    extra-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>, <&gpio1 6 GPIO_ACTIVE_HIGH>;
 };
