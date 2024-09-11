@@ -13,7 +13,7 @@ if SHIELD_NEXUSKEY_LEFT || SHIELD_NEXUSKEY_RIGHT
 config ZMK_SPLIT
     default y
 
-config CONFIG_ZMK_SLEEP
+config ZMK_SLEEP
     default y
 
 config ZMK_PM_SOFT_OFF
