@@ -1,2 +1,5 @@
-config SHIELD_NEXUSKEY
-    def_bool $(shields_list_contains,NexusKey)
+config SHIELD_NEXUSKEY_LEFT
+    def_bool $(shields_list_contains,NexusKey_Left)
+
+config SHIELD_NEXUSKEY_RIGHT
+    def_bool $(shields_list_contains,NexusKey_Right)
