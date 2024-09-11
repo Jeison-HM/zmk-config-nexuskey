@@ -8,7 +8,7 @@
 
 &default_kscan
 {
-    row-gpios 
+    row-gpios
         = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    // P0.09
         , <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    // P1.03
         , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    // P1.00
@@ -27,5 +27,8 @@
 // Enable columns pins for AND gate.
 &wakeup_source
 {
-    extra-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>, <&gpio1 6 GPIO_ACTIVE_HIGH>;
+    extra-gpios
+        = <&gpio1 11 GPIO_ACTIVE_HIGH>
+        , <&gpio1 6 GPIO_ACTIVE_HIGH>
+        ;
 };
