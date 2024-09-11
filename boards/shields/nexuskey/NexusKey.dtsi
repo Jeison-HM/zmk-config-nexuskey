@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "mymacros.h"
+
+#define HOLD_TIME 3000
 
 // Matrix Scan
 
