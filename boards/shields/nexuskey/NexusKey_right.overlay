@@ -24,13 +24,8 @@
         ;
 };
 
-\ {
-    // Attach the keys device to wake up sources so it can turn on the keyboard.
-
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-        extra-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH)>, <&gpio1 6 (GPIO_ACTIVE_HIGH)>; // Enable columns pins for AND gate.
-        trigger = <&soft_off_key>;
-        wakeup-source;
-    };
+// Enable columns pins for AND gate.
+&wakeup_source
+{
+    extra-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH)>, <&gpio1 6 (GPIO_ACTIVE_HIGH)>;
 };
