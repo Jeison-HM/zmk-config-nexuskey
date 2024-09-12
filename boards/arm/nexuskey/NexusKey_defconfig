@@ -23,12 +23,3 @@ CONFIG_FLASH_MAP=y
 
 CONFIG_ZMK_USB=y
 CONFIG_ZMK_BLE=y
-
-# Enable logging
-CONFIG_LOG=y
-# CONFIG_LOG_DEFAULT_LEVEL=3  # Set the logging level
-
-# Enable UART for logging
-# CONFIG_LOG_BACKEND_UART=y
-# CONFIG_UART_CONSOLE=y  # Use UART for the console
-# CONFIG_NRFX_UART_LOG=y
