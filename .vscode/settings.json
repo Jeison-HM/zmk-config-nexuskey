@@ -2,6 +2,7 @@
     "files.associations": {
         "*.keymap": "c",
         "*.dtsi": "c",
-        "mymacros.h": "c"
+        "mymacros.h": "c",
+        "*.overlay": "c"
     }
 }
