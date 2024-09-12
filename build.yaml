@@ -20,7 +20,5 @@
 include:
   - board: NexusKey
     shield: NexusKey_left
-    snippet: zmk-usb-logging
   - board: NexusKey
     shield: NexusKey_right
-    snippet: zmk-usb-logging
