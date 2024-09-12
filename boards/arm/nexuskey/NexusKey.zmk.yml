@@ -1,0 +1,8 @@
+file_format: "1"
+id: NexusKey
+name: NexusKey
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble

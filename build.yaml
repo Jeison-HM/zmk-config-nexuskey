@@ -18,7 +18,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: NexusKey
     shield: NexusKey_left
-  - board: nice_nano_v2
+  - board: NexusKey
     shield: NexusKey_right
