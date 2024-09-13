@@ -15,19 +15,19 @@
         ;
 
     col-gpios
-        = <&gpio1 11 GPIO_ACTIVE_HIGH>  // P1.11
-        , <&gpio0 22 GPIO_ACTIVE_HIGH>  // P0.22
-        , <&gpio0 28 GPIO_ACTIVE_HIGH>  // P0.28
-        , <&gpio1 4 GPIO_ACTIVE_HIGH>   // P1.04
+        = <&gpio0 10 GPIO_ACTIVE_HIGH>  // P0.10
         , <&gpio1 6 GPIO_ACTIVE_HIGH>   // P1.06
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // P0.10
+        , <&gpio1 4 GPIO_ACTIVE_HIGH>   // P1.04
+        , <&gpio0 28 GPIO_ACTIVE_HIGH>  // P0.28
+        , <&gpio0 22 GPIO_ACTIVE_HIGH>  // P0.22
+        , <&gpio1 11 GPIO_ACTIVE_HIGH>  // P1.11
         ;
 };
 
 &wakeup_source
 {
     extra-gpios
-        = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
-        , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
+        = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
+        , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>
         ;
 };
