@@ -19,9 +19,9 @@
         default_layer {
             bindings = 
             <
-                &kp Q   &kp W   &kp F   &kp P   &kp B                                   &kp J   &kp L   &kp U       &kp Y       &kp SEMICOLON
-                &kp A   &kp R   &kp S   &kp T   &kp G   &mo NUMERIC     &mo NUMERIC     &kp M   &kp N   &kp E       &kp L       &kp O
-                &kp Z   &kp X   &kp C   &kp D   &kp V   &mo SYSTEM      &mo SYSTEM      &kp K   &kp H   &kp COMMA   &kp PERIOD  &kp SLASH
+                                &kp J   &kp L   &kp U       &kp Y       &kp SEMICOLON
+                &mo NUMERIC     &kp M   &kp N   &kp E       &kp L       &kp O
+                &mo SYSTEM      &kp K   &kp H   &kp COMMA   &kp PERIOD  &kp SLASH
             >;
         };
 
@@ -32,9 +32,9 @@
         system_layer {
             bindings = 
             <
-                &soft_off   &none           &none           &none           &sys_reset                          &sys_reset      &none         &none         &none              &soft_off
-                &none       &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none     &none     &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL     &none
-                &bootloader &none           &none           &none           &none           &none     &none     &none           &none         &none         &none              &bootloader
+                          &sys_reset      &none         &none         &none              &soft_off
+                &none     &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL     &none
+                &none     &none           &none         &none         &none              &bootloader
             >;
         };
     };

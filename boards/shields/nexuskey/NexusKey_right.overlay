@@ -43,10 +43,3 @@
         wakeup-source;
     };
 };
-
-// The keyboard's switch matrix is read from left to right, top to bottom.
-
-&default_transform
-{
-    col-offset = <6>;
-};
