@@ -20,3 +20,4 @@
 include:
   - board: NexusKey
     shield: NexusKey_right
+    cmake-args: -DCMAKE_BUILD_TYPE=Debug
