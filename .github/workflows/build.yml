@@ -2,10 +2,13 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    steps:
-      - name: Build Job
-        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
+  elf:
+    runs-on: ubuntu-latest
+    needs: build
+    name: Rename ELF Debug Artifact
+    steps:
       - name: Rename ELF Debug Artifact
         shell: sh -x {0}
         run: |
@@ -16,3 +19,15 @@ jobs:
           then
             cp "${{ env.build_dir }}/zephyr/zmk.elf" "${{ env.build_dir }}/artifacts/${{ env.artifact_name }}.elf"
           fi
+
+  merge:
+  runs-on: ubuntu-latest
+  needs: elf
+  name: Merge Output Artifacts
+  steps:
+    - name: Merge Artifacts
+      uses: actions/upload-artifact/merge@v4
+      with:
+        name: ${{ inputs.archive_name }}
+        pattern: artifact-*
+        delete-merged: true
