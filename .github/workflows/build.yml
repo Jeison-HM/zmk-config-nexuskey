@@ -2,8 +2,10 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     steps:
+      - name: Build Job
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
       - name: Rename ELF Debug Artifact
         shell: sh -x {0}
         run: |
