@@ -20,5 +20,3 @@
 include:
   - board: NexusKey
     shield: NexusKey_left
-  - board: NexusKey
-    shield: NexusKey_right
