@@ -2,32 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
-  elf:
-    runs-on: ubuntu-latest
-    needs: build
-    name: Rename ELF Debug Artifact
-    steps:
-      - name: Rename ELF Debug Artifact
-        shell: sh -x {0}
-        run: |
-          if [ -f "${{ env.build_dir }}/zephyr/zephyr.elf" ]
-          then
-            cp "${{ env.build_dir }}/zephyr/zephyr.elf" "${{ env.build_dir }}/artifacts/${{ env.artifact_name }}.elf"
-          elif [ -f "${{ env.build_dir }}/zephyr/zmk.elf" ]
-          then
-            cp "${{ env.build_dir }}/zephyr/zmk.elf" "${{ env.build_dir }}/artifacts/${{ env.artifact_name }}.elf"
-          fi
-
-  merge:
-    runs-on: ubuntu-latest
-    needs: elf
-    name: Merge Output Artifacts
-    steps:
-      - name: Merge Artifacts
-        uses: actions/upload-artifact/merge@v4
-        with:
-          name: ${{ inputs.archive_name }}
-          pattern: artifact-*
-          delete-merged: true
+    uses: Jeison-HM/zmk/.github/workflows/build-user-config.yml@main
