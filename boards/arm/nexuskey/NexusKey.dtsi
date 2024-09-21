@@ -53,9 +53,9 @@
     pinctrl-names = "default", "sleep";
 };
 
-zephyr_udc0: &usbd {
-    status = "okay";
-};
+// zephyr_udc0: &usbd {
+//     status = "okay";
+// };
 
 
 &flash0 {
