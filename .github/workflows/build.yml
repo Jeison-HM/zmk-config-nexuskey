@@ -45,6 +45,10 @@ jobs:
           echo "build_matrix=$(yaml2json '${{ inputs.build_matrix_path }}' | jq -c .)" >> $GITHUB_ENV
           yaml2json "${{ inputs.build_matrix_path }}" | jq
 
+      - name: Debug Build Matrix Output
+        run: echo "Build matrix: ${{ env.build_matrix }}"
+
+
   build:
     runs-on: ubuntu-latest
     container:
