@@ -20,4 +20,3 @@
 include:
   - board: NexusKey
     shield: NexusKey_right
-    snippet: zmk-usb-logging
