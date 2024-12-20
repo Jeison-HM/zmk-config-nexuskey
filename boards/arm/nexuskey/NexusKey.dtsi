@@ -15,9 +15,6 @@
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        zephyr,console = &uart0;
-        zephyr,shell-uart = &uart0;
-        zephyr,uart-mcumgr = &uart0;
     };
 
     leds {
@@ -45,7 +42,6 @@
 };
 
 &uart0 {
-    status = "okay";
     compatible = "nordic,nrf-uarte";
     current-speed = <115200>;
     pinctrl-0 = <&uart0_default>;
@@ -69,10 +65,10 @@ zephyr_udc0: &usbd {
         #size-cells = <1>;
 
         sd_partition: partition@0 {
-            reg = <0x00000000 0x00089000>;
+            reg = <0x00000000 0x00026000>;
         };
-        code_partition: partition@89000 {
-            reg = <0x00089000 0x000c6000>;
+        code_partition: partition@26000 {
+            reg = <0x00026000 0x00089000>;
         };
 
         /*
