@@ -50,3 +50,17 @@
 {
     col-offset = <6>;
 };
+
+// code_partition shrink by half because of physical damage in right side.
+
+&flash0 {
+    /*
+     * For more information, see:
+     * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+     */
+    partitions {
+        code_partition: partition@26000 {
+            reg = <0x00026000 0x00089000>;
+        };
+    };
+};
