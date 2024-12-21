@@ -22,3 +22,5 @@ include:
     shield: NexusKey_left
   - board: NexusKey
     shield: NexusKey_right
+  - board: NexusKey
+    shield: settings_reset
