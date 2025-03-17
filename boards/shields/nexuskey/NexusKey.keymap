@@ -12,6 +12,11 @@
     hold-time-ms = <3000>;  // Wait 3s
 };
 
+// Mod-Tap
+&mt {
+    tapping-term-ms = <1000>;
+};
+
 / {
     keymap
     {
