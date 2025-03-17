@@ -21,7 +21,7 @@
             bindings = 
             <
                 &kp Q   &kp W       &kp F       &kp P           &kp B                                           &kp J           &kp L           &kp U       &kp Y       &kp SEMICOLON
-                &kp A   &mt LGUI R  &mt LALT S   &mt LCTRL T   &mt LSHFT G   &lt NUM ENTER     &lt NUM SPACE     &mt RSHFT M    &mt RCTRL N   &mt RALT E    &mt RGUI Y  &kp O
+                &kp A   &mt LGUI R  &mt LALT S   &mt LCTRL T   &mt LSHFT G   &lt NUM ENTER     &lt NUM SPACE     &mt RSHFT M    &mt RCTRL N   &mt RALT E    &mt RGUI I  &kp O
                 &kp Z   &kp X       &kp C       &kp D           &kp V       &mt BSPC TAB      &lt NAV BSPC      &kp K           &kp H           &kp COMMA   &kp PERIOD  &kp SLASH
             >;
         };
