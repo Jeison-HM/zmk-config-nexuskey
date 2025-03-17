@@ -17,6 +17,9 @@
     tapping-term-ms = <1000>;
 };
 
+// NO PONER SPACE Y BACKSPACE EN EL MISMO LADO, PONERLO DE LADOS DIFERENTES PARA BALANCEAR DEDOS.
+// PONER EL ESCAPE EN VEZ DE SEMICOLON
+
 / {
     keymap
     {
@@ -25,9 +28,9 @@
         default_layer {
             bindings = 
             <
-                &kp Q   &kp W       &kp F       &kp P           &kp B                                           &kp J           &kp L           &kp U       &kp Y       &kp SEMICOLON
-                &kp A   &mt LGUI R  &mt LALT S   &mt LCTRL T   &mt LSHFT G   &lt NUM ENTER     &lt NUM SPACE     &mt RSHFT M    &mt RCTRL N   &mt RALT E    &mt RGUI I  &kp O
-                &kp Z   &kp X       &kp C       &kp D           &kp V       &mt BSPC TAB      &lt NAV BSPC      &kp K           &kp H           &kp COMMA   &kp PERIOD  &kp SLASH
+                &kp Q   &kp W       &kp F       &kp P           &kp B                                           &kp J           &kp L           &kp U       &kp Y       &kp ESC
+                &kp A   &mt LGUI R  &mt LALT S   &mt LCTRL T   &mt LSHFT G   &lt NUM TAB    &lt NUM BSPC      &mt RSHFT M    &mt RCTRL N   &mt RALT E    &mt RGUI I  &kp O
+                &kp Z   &kp X       &kp C       &kp D           &kp V       &lt NAV SPACE      &lt NAV ENTER      &kp K           &kp H           &kp COMMA   &kp PERIOD  &kp SLASH
             >;
         };
 
@@ -35,7 +38,7 @@
             bindings = 
             <
                 &kp N1      &kp N2              &kp N3           &kp N4                 &kp N5                                  &kp N6                  &kp N7                      &kp N8              &kp N9              &kp N0
-                &kp DOLLAR  &mt LGUI PLUS      &mt LALT LPAR      &mt LCTRL RPAR        &mt LSHFT AT     &trans     &trans     &mt RSHFT BACKSLASH      &mt RCTRL UNDERSCORE      &mt  RALT EQUAL       &mt RGUI MINUS      &kp ASTRK
+                &kp DOLLAR  &mt LGUI PLUS      &mt LALT LPAR      &mt LCTRL RPAR        &mt LSHFT AT     &trans     &trans     &mt RSHFT BACKSLASH      &mt RCTRL UNDERSCORE      &mt  RALT EQUAL       &mt RGUI MINUS      &kp SEMICOLON
                 &kp EXCL    &kp HASH           &kp LEFT_BRACE      &kp RIGHT_BRACE      &kp GRAVE        &trans     &trans     &kp AMPERSAND           &kp LEFT_BRACKET         &kp RIGHT_BRACKET      &kp PERCENT          &kp CARET
             >;
         };
