@@ -1,0 +1,12 @@
+file_format: "1"
+id: nexuskey
+name: NexusKey
+type: shield
+url: https://github.com/Jeison-HM/zmk-config-nexuskey
+requires: [nrf52840]
+features:
+  - keys
+  - studio
+siblings:
+  - nexuskey_left
+  - nexuskey_right
