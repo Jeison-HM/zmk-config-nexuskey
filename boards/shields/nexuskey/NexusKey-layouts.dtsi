@@ -7,14 +7,14 @@
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
 
-        keys  //               w     h      x      y    rot     rx     ry
+        keys  //               w     h      x      y    rot      rx     ry
         = <&key_physical_attrs 100   100    60     49   1500    110     99>
         , <&key_physical_attrs 100   100   222     14   2000    272     64>
         , <&key_physical_attrs 100   100   417     34   3000    467     84>
-        , <&key_physical_attrs 100   100   551    190 (-4500)   601    240>
-        , <&key_physical_attrs 100   100   622    265 (-4500)   672    315>
-        , <&key_physical_attrs 100   100  1011    265   4500   1061    315>
-        , <&key_physical_attrs 100   100  1082    190   4500   1132    240>
+        , <&key_physical_attrs 100   100   551    190   4500    601    240>
+        , <&key_physical_attrs 100   100   622    265   4500    672    315>
+        , <&key_physical_attrs 100   100  1011    265 (-4500)  1061    315>
+        , <&key_physical_attrs 100   100  1082    190 (-4500)  1132    240>
         , <&key_physical_attrs 100   100  1216     34 (-3000)  1266     84>
         , <&key_physical_attrs 100   100  1411     14 (-2000)  1461     64>
         , <&key_physical_attrs 100   100  1573     49 (-1500)  1623     99>
@@ -22,12 +22,12 @@
         , <&key_physical_attrs 100   100    36    145   1500     86    195>
         , <&key_physical_attrs 100   100   190    108   2000    240    158>
         , <&key_physical_attrs 100   100   370    121   3000    420    171>
-        , <&key_physical_attrs 100   100   485    261 (-4500)   535    311>
-        , <&key_physical_attrs 100   100   555    335 (-4500)   605    385>
-        , <&key_physical_attrs 100   150   456    551 (-3000)   531    601>
-        , <&key_physical_attrs 100   150  1177    551   3000   1202    601>
-        , <&key_physical_attrs 100   100  1078    335   4500   1128    385>
-        , <&key_physical_attrs 100   100  1149    261   4500   1199    311>
+        , <&key_physical_attrs 100   100   485    261   4500    535    311>
+        , <&key_physical_attrs 100   100   555    335   4500    605    385>
+        , <&key_physical_attrs 100   150   456    551   6000    531    601>
+        , <&key_physical_attrs 100   150  1177    551  12000   1202    601>
+        , <&key_physical_attrs 100   100  1078    335 (-4500)  1128    385>
+        , <&key_physical_attrs 100   100  1149    261 (-4500)  1199    311>
         , <&key_physical_attrs 100   100  1263    121 (-3000)  1313    171>
         , <&key_physical_attrs 100   100  1444    108 (-2000)  1494    158>
         , <&key_physical_attrs 100   100  1598    145 (-1500)  1648    195>
@@ -35,12 +35,12 @@
         , <&key_physical_attrs 100   100    11    242   1500     61    292>
         , <&key_physical_attrs 100   100   157    202   2000    207    252>
         , <&key_physical_attrs 100   100   323    207   3000    373    257>
-        , <&key_physical_attrs 100   100   418    331 (-4500)   468    381>
-        , <&key_physical_attrs 100   100   489    406 (-4500)   539    456>
-        , <&key_physical_attrs 100   150   504    638 (-3000)   579    688>
-        , <&key_physical_attrs 100   150  1130    638   3000   1155    688>
-        , <&key_physical_attrs 100   100  1145    406   4500   1195    456>
-        , <&key_physical_attrs 100   100  1216    331   4500   1266    381>
+        , <&key_physical_attrs 100   100   418    331   4500    468    381>
+        , <&key_physical_attrs 100   100   489    406   4500    539    456>
+        , <&key_physical_attrs 100   150   504    638   6000    579    688>
+        , <&key_physical_attrs 100   150  1130    638  12000   1155    688>
+        , <&key_physical_attrs 100   100  1145    406 (-4500)  1195    456>
+        , <&key_physical_attrs 100   100  1216    331 (-4500)  1266    381>
         , <&key_physical_attrs 100   100  1310    207 (-3000)  1360    257>
         , <&key_physical_attrs 100   100  1476    202 (-2000)  1526    252>
         , <&key_physical_attrs 100   100  1622    242 (-1500)  1672    292> 
