@@ -35,6 +35,16 @@
             >;
         };
 
+        game_layer {
+            display-name = "Gaming";
+            bindings = 
+            <
+                &kp ESC   &kp Q       &kp W       &kp E           &kp R                                           &kp T           &kp Y           &kp U       &kp I       &kp O
+                &kp LSHFT   &kp A       &kp S       &kp D           &kp F       &lt NUM TAB    &lt NAV BSPC     &kp G             &kp H           &kp J         &kp K       &kp L
+                &kp LCTRL   &kp Z       &kp X       &kp C           &kp V       &kp SPACE      &kp ENTER           &kp B           &kp N           &kp M   &kp P  &kp LALT
+            >;
+        };
+
         num_layer {
             display-name = "Symbols";
             bindings = 
@@ -52,16 +62,6 @@
                 &kp F1      &kp F2              &kp F3           &kp F4                 &kp F5                                      &kp F6                  &kp F7                  &kp F8               &kp F9              &kp F10
                 &kp F11     &mt LGUI HOME      &mt LALT PSCRN      &mt LCTRL DEL        &mt LSHFT PG_UP     &trans     &trans     &kp RSHFT                 &kp RCTRL               &mt RALT UP       &kp RGUI              &kp F12
                 &none       &kp END             &kp ESC             &kp INS             &kp PG_DN        &trans     &trans          &none                   &kp LEFT                   &kp DOWN             &kp RIGHT       &none
-            >;
-        };
-
-        game_layer {
-            display-name = "Gaming";
-            bindings = 
-            <
-                &kp ESC   &kp Q       &kp W       &kp E           &kp R                                           &kp T           &kp Y           &kp U       &kp I       &kp O
-                &kp LSHFT   &kp A       &kp S       &kp D           &kp F       &lt NUM TAB    &lt NAV BSPC     &kp G             &kp H           &kp J         &kp K       &kp L
-                &kp LCTRL   &kp Z       &kp X       &kp C           &kp V       &kp SPACE      &kp ENTER           &kp B           &kp N           &kp M   &kp P  &kp LALT
             >;
         };
 
