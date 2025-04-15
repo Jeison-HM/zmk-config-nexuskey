@@ -1,0 +1,71 @@
+#include <physical_layouts.dtsi>
+
+// Physical Layout
+
+/ {
+    nexuskey_layout: nexuskey_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+
+        keys  //                     w   h      x      y    rot      rx     ry
+            = <&key_physical_attrs 100 100   6010   4870   1500   11010   9870>
+            , <&key_physical_attrs 100 100  22200   1410   2000   27200   6410>
+            , <&key_physical_attrs 100 100  41740   3400   3000   46740   8400>
+            , <&key_physical_attrs 100 100  55140  18990 (-4500)  60140  23990>
+            , <&key_physical_attrs 100 100  62210  26470 (-4500)  67210  31470>
+            , <&key_physical_attrs 100 100 101120  26470   4500  106120  31470>
+            , <&key_physical_attrs 100 100 108190  18990   4500  113190  23990>
+            , <&key_physical_attrs 100 100 121590   3400 (-3000) 126590   8400>
+            , <&key_physical_attrs 100 100 141130   1410 (-2000) 146130   6410>
+            , <&key_physical_attrs 100 100 157320   4870 (-1500) 162320   9870>
+            // Row 0
+            , <&key_physical_attrs 100 100   3570  14530   1500    8570  19530>
+            , <&key_physical_attrs 100 100  18970  10810   2000   23970  15810>
+            , <&key_physical_attrs 100 100  37020  12060   3000   42020  17060>
+            , <&key_physical_attrs 100 100  48460  26060 (-4500)  53460  31060>
+            , <&key_physical_attrs 100 100  55530  33540 (-4500)  60530  38540>
+            , <&key_physical_attrs 100 150  45630  55120 (-3000)  53130  60120>
+            , <&key_physical_attrs 100 150 117700  55120   3000  120200  60120>
+            , <&key_physical_attrs 100 100 107800  33540   4500  112800  38540>
+            , <&key_physical_attrs 100 100 114870  26060   4500  119870  31060>
+            , <&key_physical_attrs 100 100 126310  12060 (-3000) 131310  17060>
+            , <&key_physical_attrs 100 100 144360  10810 (-2000) 149360  15810>
+            , <&key_physical_attrs 100 100 159760  14530 (-1500) 164760  19530>
+            // Row 1
+            , <&key_physical_attrs 100 100   1120  24190   1500    6120  29190>
+            , <&key_physical_attrs 100 100  15740  20200   2000   20740  25200>
+            , <&key_physical_attrs 100 100  32300  20720   3000   37300  25720>
+            , <&key_physical_attrs 100 100  41780  33130 (-4500)  46780  38130>
+            , <&key_physical_attrs 100 100  48850  40610 (-4500)  53850  45610>
+            , <&key_physical_attrs 100 150  50350  63780 (-3000)  57850  68780>
+            , <&key_physical_attrs 100 150 112980  63780   3000  115480  68780>
+            , <&key_physical_attrs 100 100 114480  40610   4500  119480  45610>
+            , <&key_physical_attrs 100 100 121550  33130   4500  126550  38130>
+            , <&key_physical_attrs 100 100 131030  20720 (-3000) 136030  25720>
+            , <&key_physical_attrs 100 100 147590  20200 (-2000) 152590  25200>
+            , <&key_physical_attrs 100 100 162210  24190 (-1500) 167210  29190>
+            // Row 2
+            ;
+    };
+};
+
+// Position Map
+
+/ {
+    nexuskey_position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        default_map: default {
+            physical-layout = <&nexuskey_layout>;
+            positions
+                = < 0  1  2  3  4        5  6  7  8  9>
+                , <10 11 12 13 14 15 16 17 18 19 20 21>
+                , <22 23 24 25 26 27 28 29 30 31 32 33>
+                ;
+        };
+    };
+};
