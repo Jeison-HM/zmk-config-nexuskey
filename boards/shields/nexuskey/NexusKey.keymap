@@ -64,7 +64,7 @@
         bt_layer {
             bindings = 
             <
-                &none       &none           &bootloader             &none               &sys_reset                              &sys_reset      &none         &bootloader         &none              &none
+                &studio_unlock       &none           &bootloader             &none               &sys_reset                              &sys_reset      &none         &bootloader         &none              &studio_unlock
                 &none       &none           &soft_off               &none               &none            &trans     &trans      &none           &none          &soft_off            &none            &none
                 &bt BT_CLR_ALL  &bt BT_SEL 2    &bt BT_SEL 1            &bt BT_SEL 0         &none           &trans     &trans      &none           &bt BT_SEL 0    &bt BT_SEL 1        &bt BT_SEL 2     &bt BT_CLR_ALL
             >;
