@@ -3,9 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NUM 1
-#define NAV 2
-#define GAME 3
+#define GAME 1
+#define NUM 2
+#define NAV 3
 #define BT 4
 
 &soft_off {
