@@ -17,61 +17,42 @@
     tapping-term-ms = <1000>;
 };
 
-// NO PONER SPACE Y BACKSPACE EN EL MISMO LADO, PONERLO DE LADOS DIFERENTES PARA BALANCEAR DEDOS.
-// PONER EL ESCAPE EN VEZ DE SEMICOLON
-
 / {
-    keymap
-    {
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
-            bindings = 
-            <
-                &kp Q   &kp W       &kp F       &kp P           &kp B                                           &kp J           &kp L           &kp U       &kp Y       &kp ESC
-                &kp A   &mt LGUI R  &mt RALT S   &mt LCTRL T   &mt LSHFT G   &lt NUM TAB    &lt NUM BSPC      &mt RSHFT M    &mt RCTRL N   &mt LALT E    &mt RGUI I  &kp O
-                &kp Z   &kp X       &kp C       &kp D           &kp V       &lt NAV SPACE      &lt NAV ENTER      &kp K           &kp H           &kp COMMA   &kp PERIOD  &kp SLASH
+            bindings = <
+            &kp Q  &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y  &kp SEMI  &kp A  &mt LGUI R  &mt RALT S  &mt LCTRL T  &mt LSHFT G  &lt NUM TAB  &lt NUM BSPC  &mt RSHFT M  &mt RCTRL N  &mt LALT E  &mt RGUI I  &kp O  &kp Z  &kp X  &kp C  &kp D  &kp V  &lt NAV SPACE  &lt NAV ENTER  &kp K  &kp H  &kp COMMA  &kp PERIOD  &kp SLASH
             >;
         };
 
         game_layer {
             display-name = "Gaming";
-            bindings = 
-            <
-                &kp ESC   &kp Q       &kp W       &kp E           &kp R                                           &kp T           &kp Y           &kp U       &kp I       &kp O
-                &kp LSHFT   &kp A       &kp S       &kp D           &kp F       &lt NUM TAB    &lt NAV BSPC     &kp G             &kp H           &kp J         &kp K       &kp L
-                &kp LCTRL   &kp Z       &kp X       &kp C           &kp V       &kp SPACE      &kp ENTER           &kp B           &kp N           &kp M   &kp P  &kp LALT
+            bindings = <
+            &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &lt NUM TAB  &lt NAV BSPC  &kp G  &kp H  &kp J  &kp K  &kp L  &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp SPACE  &kp TAB  &kp B  &kp N  &kp M  &kp P  &kp LALT
             >;
         };
 
         num_layer {
             display-name = "Symbols";
-            bindings = 
-            <
-                &kp N1      &kp N2              &kp N3           &kp N4                 &kp N5                                  &kp N6                  &kp N7                      &kp N8              &kp N9              &kp N0
-                &kp DOLLAR  &mt LGUI PLUS      &mt LALT LPAR      &mt LCTRL RPAR        &mt LSHFT AT     &trans     &trans     &mt RSHFT BACKSLASH      &mt RCTRL UNDERSCORE      &mt  RALT EQUAL       &mt RGUI MINUS      &kp SEMICOLON
-                &kp EXCL    &kp HASH           &kp LEFT_BRACE      &kp RIGHT_BRACE      &kp GRAVE        &trans     &trans     &kp AMPERSAND           &kp LEFT_BRACKET         &kp RIGHT_BRACKET      &kp PERCENT          &kp CARET
+            bindings = <
+            &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &caps_word  &mt LGUI GRAVE  &mt RIGHT_ALT APOS  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans  &mt RSHFT MINUS  &mt RCTRL EQUAL  &mt LEFT_ALT LEFT_BRACE  &mt RGUI RIGHT_BRACE  &kp BACKSLASH  &none  &none  &none  &none  &none  &kp BACKSPACE  &trans  &none  &none  &none  &none  &none
             >;
         };
 
         nav_layer {
             display-name = "Navigation";
-            bindings = 
-            <
-                &kp F1      &kp F2              &kp F3           &kp F4                 &kp F5                                      &kp F6                  &kp F7                  &kp F8               &kp F9              &kp F10
-                &kp F11     &mt LGUI HOME      &mt LALT PSCRN      &mt LCTRL DEL        &mt LSHFT PG_UP     &trans     &trans     &kp RSHFT                 &kp RCTRL               &mt RALT UP       &kp RGUI              &kp F12
-                &none       &kp END             &kp ESC             &kp INS             &kp PG_DN        &trans     &trans          &none                   &kp LEFT                   &kp DOWN             &kp RIGHT       &none
+            bindings = <
+            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &mt LGUI ESCAPE  &mt LALT UP_ARROW  &mt LCTRL PRINTSCREEN  &mt LSHFT DELETE  &kp RETURN  &trans  &kp RSHFT  &kp RCTRL  &mt RALT PAGE_UP  &kp RGUI  &kp F12  &kp C_PLAY_PAUSE  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp INSERT  &trans  &trans  &kp C_PREVIOUS  &kp HOME  &kp PAGE_DOWN  &kp END  &kp C_NEXT
             >;
         };
 
         bt_layer {
             display-name = "Bluetooth";
-            bindings = 
-            <
-                &studio_unlock       &none           &bootloader             &none               &sys_reset                              &sys_reset      &none         &bootloader         &none              &studio_unlock
-                &none       &none           &soft_off               &none               &none            &trans     &trans      &none           &none          &soft_off            &none            &none
-                &bt BT_CLR_ALL  &bt BT_SEL 2    &bt BT_SEL 1            &bt BT_SEL 0         &none           &trans     &trans      &none           &bt BT_SEL 0    &bt BT_SEL 1        &bt BT_SEL 2     &bt BT_CLR_ALL
+            bindings = <
+            &studio_unlock  &none  &bootloader  &none  &sys_reset  &sys_reset  &none  &bootloader  &none  &studio_unlock  &none  &none  &soft_off  &none  &none  &trans  &trans  &none  &none  &soft_off  &none  &none  &bt BT_CLR_ALL  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none  &trans  &trans  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL
             >;
         };
     };
